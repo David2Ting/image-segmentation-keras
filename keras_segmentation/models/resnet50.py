@@ -176,7 +176,7 @@ def get_resnet50_encoder(input_height=224,  input_width=224,
         (7, 7), data_format=IMAGE_ORDERING, name='avg_pool')(x)
     # f6 = x
 
-    if pretrained == 'imagenet':
+    if False:#pretrained == 'imagenet':
         weights_path = keras.utils.get_file(
             pretrained_url.split("/")[-1], pretrained_url)
         Model(img_input, x).load_weights(weights_path)
