@@ -106,7 +106,7 @@ def get_mobilenet_encoder(input_height=224, input_width=224,
     x = _depthwise_conv_block(x, 1024, alpha, depth_multiplier, block_id=13)
     f5 = x
 
-    if pretrained == 'imagenet':
+    if False: #pretrained == 'imagenet':
         model_name = 'mobilenet_%s_%d_tf_no_top.h5' % ('1_0', 224)
 
         weight_path = BASE_WEIGHT_PATH + model_name
